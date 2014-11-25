@@ -1,1 +1,9 @@
-<%= column_chart Payment.global_sales_by_month, {library: {hAxis: {title: "Mes"}, vAxis: {title: "Ventas(USD)"}}}  %>
+<h1>Hola Estas son unas charts</h1>
+
+<%= column_chart Payment.global_sales_by_month(300), {library: {hAxis: {title: "Mes"}, vAxis: {title: "Ventas(USD)"}}}  %>
+
+<%= pie_chart Payment.sales_by_category  %>
+
+<%= column_chart Payment.sales_by_store, {library: {hAxis: {title: "Sucursal"}, vAxis: {title: "Ventas(USD)"}}}  %>
+
+<%= bar_chart Payment.best_10_customers, {library: {hAxis: {title: "Cliente"}, vAxis: {title: "Ventas(USD)"}}} %>
